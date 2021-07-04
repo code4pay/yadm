@@ -115,12 +115,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-eval `ssh-agent`
-ssh-add ~/.ssh/qa_rsa
-ssh-add ~/.ssh/bin_git_rsa 
-export PATH=$PATH:~/utils:/opt/app_images:~/dev/flutter/bin
+export PATH=$PATH:~/utils:/opt/app_images
 
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
- eval "$(starship init bash)"
+eval "$(starship init bash)"
+set -o vi

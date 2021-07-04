@@ -26,11 +26,5 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
- xrandr --newmode "2560x1440_30.00" 146.25 2560 2680 2944 3328 1440 1443 1448 1468
- xrandr --addmode HDMI-1 2560x1440_30.00
-
-# setup modem for wirles ear buds to work as microphone see https://askubuntu.com/questions/831331/failed-to-change-profile-to-headset-head-unit
-ofono-phonesim -p 12345 /usr/share/phonesim/default.xml&
-#mount /opt/nextcloud
 
 export PATH="$HOME/.cargo/bin:$PATH"
